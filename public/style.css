@@ -65,3 +65,8 @@ input {
 .invalid {
   border: 1px solid red;
 }
+
+#get-container {
+  text-align: left;
+  line-height: 2;
+}

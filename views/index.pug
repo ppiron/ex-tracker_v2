@@ -19,7 +19,9 @@ html
         input(type="text", name="userID", placeholder="userID*", class='required')
         input(type="text", name="description", placeholder="description*", class='required')
         input(type="text", name="duration", placeholder="duration* (mins.)", class='required')
-        input(type="text", name="date", placeholder="date (yyyy-mm-dd)")
+        .date-input
+          input(type="text", name="date", class='date', placeholder="date (yyyy-mm-dd)")
+          span(class='errorMessage hidden floated') Date should be in #[br] yyyy-mm-dd format
       p(class="errorMessage hidden") Fields marked as * are required
       button(class="button") Submit
       #get-container

@@ -1,7 +1,9 @@
 const form = document.getElementById("add-exercise");
 const button = document.querySelectorAll('.button')[1];
 const inputs = document.querySelectorAll(".required");
-const error = document.querySelectorAll(".errorMessage")[0]
+const dateInput = document.querySelectorAll(".date")[0];
+const error = document.querySelectorAll(".errorMessage")[1]
+const dateError = document.querySelectorAll(".errorMessage")[0]
 let invalidCount = 0
 // inputs.forEach(input => console.log(input))
 
@@ -12,6 +14,11 @@ button.addEventListener('click', function(event) {
       invalidCount += 1
     }
   })
+  if (!/\d\d\d\d-\d\d-\d\d/.match(dateInput.value)) {
+    dateInput.classList.add('invalid')
+    error.classList.remove('hidden')
+    invalidCount += 1
+  }
   invalidCount === 0 ? form.submit() : error.classList.remove('hidden')
 })
 

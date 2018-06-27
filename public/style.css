@@ -48,6 +48,7 @@ input {
   display: block;
   margin: 0 auto;
   margin-top: 30px;
+  font-size: 12px;
 }
 
 .hidden {
@@ -69,4 +70,15 @@ input {
 #get-container {
   text-align: left;
   line-height: 2;
+}
+
+.date-input {
+  position: relative;
+}
+
+.floated {
+  position: absolute;
+  margin: 0;
+  top: 10%;
+  right: 0;
 }
